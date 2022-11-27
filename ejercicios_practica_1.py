@@ -14,6 +14,15 @@ import csv
 
 def desafio():
     print('Ejercicios con diccionarios')
+
+    stock = {}
+    stock['tornillo'] = 100
+    stock['tuercas'] = 150
+    stock['arandelas'] = 300
+    print(stock)
+    return stock
+
+
     # Crear un diccionario vacio
     # el diccionario vacio debe llamarse "stock"
     

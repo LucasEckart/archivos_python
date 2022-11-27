@@ -14,8 +14,20 @@ import csv
 
 def desafio():
     print('Ejercicio de archivos')
-    archivo = 'stock.csv'
     
+    with open ("stock.csv") as csvfile:
+        data = list(csv.DictReader(csvfile))
+         
+    
+    cantidad_tornillos = 0
+    for i in data:
+        cantidad_tornillos += int(i['tornillos'])
+    print(f'Cantidad de tornillo: {cantidad_tornillos}')
+             
+
+  
+            
+
     # Realice un programa que abra el archivo 'stock.csv'
     # en modo lectura y cuente el stock total de tornillos
     # a lo largo de todo el archivo, 

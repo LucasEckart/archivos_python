@@ -17,7 +17,31 @@ import csv
 
 def desafio(ambientes):
     print('Ejercicios con archivos CSV complejos')
-    archivo = 'propiedades.csv'
+    with open ('propiedades.csv') as csvfile:
+        data = list(csv.DictReader(csvfile))
+
+
+
+    dos_ambientes = 0
+    tres_ambientes = 0
+ 
+    for i in data:    
+        try:
+            ambientes = int(i['ambientes'])
+            if ambientes == 2:
+               dos_ambientes += 1             
+            elif ambientes == 3:
+                tres_ambientes += 1                  
+        except:
+            continue   
+
+        
+        
+    print(f'Cantidad de departamentos de dos ambientes: {dos_ambientes}\nCantidad de departamentos de tres ambientes: {tres_ambientes}')
+        
+                
+          
+            
 
     # Realice un programa que abra el archivo CSV "propiedades.csv"
     # en modo lectura. Recorrar dicho archivo y contar

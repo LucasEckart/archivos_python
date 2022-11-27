@@ -20,10 +20,29 @@ def desafio():
     
     stock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
 
+    while True:
+        producto = (input(f'¿Que producto desea agregar al stock?. "fin" para finalizar:\n'))
+
+        if producto in stock:
+            cantidad = int(input(f'¿Que cantidad desea agregar?\n'))
+            stock[producto] += cantidad 
+            
+        elif producto == 'fin':
+            print(stock)
+            exit()
+            
+       
+        else:
+            print(f'El producto no esta en la lista')  
+
+   
+
+
+            
     # Paso 1:
     # Crear un bucle utilizando while que se ejecute de forma infinita
     # while True.....
-    
+                    
     # Paso 2:
     # Dentro de ese bucle consultar al usuario por consola
     # que producto desea agregar al stock
