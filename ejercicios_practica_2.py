@@ -21,7 +21,7 @@ def desafio():
     stock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
 
     while True:
-        producto = (input(f'¿Que producto desea agregar al stock?. "fin" para finalizar:\n'))
+        producto = (input(f'¿Que producto desea agregar al stock?. "fin" para finalizar:\n')).lower()
 
         if producto in stock:
             cantidad = int(input(f'¿Que cantidad desea agregar?\n'))
