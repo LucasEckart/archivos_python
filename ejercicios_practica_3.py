@@ -23,6 +23,7 @@ def desafio():
     for i in data:
         cantidad_tornillos += int(i['tornillos'])
     print(f'Cantidad de tornillo: {cantidad_tornillos}')
+    return cantidad_tornillos
              
 
   
